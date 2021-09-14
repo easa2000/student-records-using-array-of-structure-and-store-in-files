@@ -31,3 +31,19 @@ int main()
         printf("\n Enter the marks: ");
         scanf("%d",&stud[i].marks);
     }
+    
+        // print to the screen
+    for(i=0;i<n;i++)
+    {
+        printf("\n ***** STUDENT'S DETAILS *****");
+        printf("\n  ROLL NUMBER = %d ",stud[i].roll_no);
+        printf("\n NAME = %s",stud[i].name);
+        printf("\n MARKS = %d",stud[i].marks);
+
+        // write to file
+        fprintf(fp," %d \n %s \n %d \n\n",stud[i].roll_no, stud[i].name,stud[i].marks);
+    }
+    printf("\n Data written to the file");
+    fclose(fp);
+}
+
